@@ -7,9 +7,9 @@ import router from "./Routes/Routes.jsx";
 import AuthProvider from "./providers/AuthProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <AuthProvider>
-  <ThemeProvider>
-    <RouterProvider router={router} />
-  </ThemeProvider>
-  // </AuthProvider>
+  <AuthProvider>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  </AuthProvider>
 );
