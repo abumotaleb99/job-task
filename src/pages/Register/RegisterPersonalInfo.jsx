@@ -65,13 +65,13 @@ const RegisterPersonalInfo = () => {
       </h2>
       <form>
         <div>
-          <label className="text-2xl text-[#333333] font-medium">
+          <label className="text-xl md:text-2xl text-[#333333] font-medium">
             Full Name
           </label>
           <input
             type="text"
             name="full_name"
-            className="w-full border border-[#333333] rounded-md focus:outline-none text-lg  px-3 py-4 mt-2"
+            className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg  px-3 py-4 mt-2"
             placeholder="Enter Full Name"
             value={userData.full_name}
             onChange={handleChange}
@@ -79,13 +79,13 @@ const RegisterPersonalInfo = () => {
           />
         </div>
         <div className="mt-6">
-          <label className="text-2xl text-[#333333] font-medium">
+          <label className="text-xl md:text-2xl text-[#333333] font-medium">
             Email Address
           </label>
           <input
             type="email"
             name="email"
-            className="w-full border border-[#333333] rounded-md focus:outline-none text-lg  px-3 py-4 mt-2"
+            className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg  px-3 py-4 mt-2"
             placeholder="Enter Email Address"
             value={userData.email}
             onChange={handleChange}
@@ -93,13 +93,13 @@ const RegisterPersonalInfo = () => {
           />
         </div>
         <div className="mt-6">
-          <label className="text-2xl text-[#333333] font-medium">
+          <label className="text-xl md:text-2xl text-[#333333] font-medium">
             Position
           </label>
           <div>
             <select
               name="position"
-              className="w-full border border-[#333333] rounded-md focus:outline-none text-lg px-3 py-4 mt-2"
+              className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg px-3 py-4 mt-2"
               value={userData.position}
               onChange={handleChange}
             >
@@ -112,11 +112,11 @@ const RegisterPersonalInfo = () => {
         {userData.position === "Teacher" && (
           <>
             <div className="mt-6">
-              <label className="text-2xl text-[#333333] font-medium">
+              <label className="text-xl md:text-2xl text-[#333333] font-medium">
                 Institute Name
                 <select
                   name="institution_name"
-                  className="w-full border border-[#333333] rounded-md focus:outline-none text-lg px-3 py-4 mt-2"
+                  className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg px-3 py-4 mt-2"
                   value={userData.institution_name}
                   onChange={handleChange}
                 >
@@ -130,13 +130,13 @@ const RegisterPersonalInfo = () => {
               </label>
             </div>
             <div className="mt-6">
-              <label className="text-2xl text-[#333333] font-medium">
+              <label className="text-xl md:text-2xl text-[#333333] font-medium">
                 Work Time
               </label>
               <div>
                 <select
                   name="work_time"
-                  className="w-full border border-[#333333] rounded-md focus:outline-none text-lg px-3 py-4 mt-2"
+                  className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg px-3 py-4 mt-2"
                   value={userData.work_time}
                   onChange={handleChange}
                 >
@@ -151,11 +151,11 @@ const RegisterPersonalInfo = () => {
         {userData.position === "Student" && (
           <>
             <div className="mt-6">
-              <label className="text-2xl text-[#333333] font-medium">
+              <label className="text-xl md:text-2xl text-[#333333] font-medium">
                 Institute Name
                 <select
                   name="institution_name"
-                  className="w-full border border-[#333333] rounded-md focus:outline-none text-lg px-3 py-4 mt-2"
+                  className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg px-3 py-4 mt-2"
                   value={userData.institution_name}
                   onChange={handleChange}
                 >
@@ -169,11 +169,11 @@ const RegisterPersonalInfo = () => {
               </label>
             </div>
             <div className="mt-6">
-              <label className="text-2xl text-[#333333] font-medium">
+              <label className="text-xl md:text-2xl text-[#333333] font-medium">
                 Education Level
                 <select
                   name="education_level"
-                  className="w-full border border-[#333333] rounded-md focus:outline-none text-lg px-3 py-4 mt-2"
+                  className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg px-3 py-4 mt-2"
                   value={userData.education_level}
                   onChange={handleChange}
                 >
@@ -190,7 +190,7 @@ const RegisterPersonalInfo = () => {
         )}
         <Button
           onClick={() => setStep(2)}
-          className="text-2xl text-[#FFFFFF] font-semibold capitalize py-4 my-12"
+          className="text-xl md:text-2xl text-[#FFFFFF] font-semibold capitalize py-4 my-8 md:my-12"
           fullWidth
         >
           Next

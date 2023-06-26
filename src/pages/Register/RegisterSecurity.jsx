@@ -20,13 +20,13 @@ const RegisterSecurity = () => {
       </h2>
       <form>
         <div>
-          <label className="text-2xl text-[#333333] font-medium">
+          <label className="text-xl md:text-2xl text-[#333333] font-medium">
             New Password
           </label>
           <input
             type="password"
             name="password"
-            className="w-full border border-[#333333] rounded-md focus:outline-none text-lg  px-3 py-4 mt-2"
+            className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg  px-3 py-4 mt-2"
             placeholder="Enter New Password"
             value={userData.password}
             onChange={handleChange}
@@ -34,13 +34,13 @@ const RegisterSecurity = () => {
           />
         </div>
         <div className="mt-6">
-          <label className="text-2xl text-[#333333] font-medium">
+          <label className="text-xl md:text-2xl text-[#333333] font-medium">
             Confirm Password
           </label>
           <input
             type="password"
             name="confirm_password"
-            className="w-full border border-[#333333] rounded-md focus:outline-none text-lg  px-3 py-4 mt-2"
+            className="w-full border border-[#333333] rounded-md focus:outline-none text-base md:text-lg  px-3 py-4 mt-2"
             placeholder="Enter Confirm Password"
             value={userData.confirm_password}
             onChange={handleChange}
@@ -49,7 +49,7 @@ const RegisterSecurity = () => {
         </div>
         <Button
           onClick={submitData}
-          className="text-2xl text-[#FFFFFF] font-semibold capitalize py-4 my-12"
+          className="text-xl md:text-2xl text-[#FFFFFF] font-semibold capitalize py-4 my-8 md:my-12"
           fullWidth
         >
           Next

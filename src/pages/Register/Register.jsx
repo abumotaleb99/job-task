@@ -38,8 +38,8 @@ const Register = () => {
           </h1>
         </Link>
       </div>
-      <div className="w-full md:max-w-5xl mx-auto px-5 xl:px-0 pt-16">
-        <Stepper className="md:max-w-5xl" activeStep={currentStep - 1}>
+      <div className="w-full md:max-w-5xl mx-auto px-5 xl:px-0 pt-10 md:pt-16">
+        <Stepper activeStep={currentStep - 1}>
           <Step>1</Step>
           <Step>2</Step>
           <Step>3</Step>
@@ -49,7 +49,7 @@ const Register = () => {
         {showForm(currentStep)}
 
         {shouldHide !== true && (
-          <p className="text-2xl text-[#000000] font-medium text-center">
+          <p className="text-xl md:text-2xl text-[#000000] font-medium text-center pb-5">
             Already Have An Account?
             <Link to="/" className="text-[#6078EA] underline pl-1">
               Log In

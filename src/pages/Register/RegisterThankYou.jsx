@@ -6,15 +6,17 @@ import "./RegisterThankYou.css";
 const RegisterThankYou = () => {
   return (
     <div className="flex flex-col items-center">
-      <button className="btn">
+      <button className="round-btn">
         <img src={img} alt="" />
       </button>
-      <h2 className="text-3xl text-[#333333] font-semibold">Thank You!</h2>
-      <p className="text-xl text[#9F9F9F] font-normal pt-4 pb-12">
+      <h2 className="text-2xl md:text-3xl text-[#333333] font-semibold">
+        Thank You!
+      </h2>
+      <p className="text-base md:text-xl text[#9F9F9F] font-normal pt-4 pb-12">
         Account Has Been Created. Enjoy Job Task.
       </p>
       <Button
-        className="text-xl text-[#6078EA] font-semibold capitalize border-2 border-[#6078EA] px-10"
+        className="text-base md:text-xl text-[#6078EA] font-semibold capitalize border-2 border-[#6078EA] px-7 md:px-10"
         variant="outlined"
       >
         Go To Home
