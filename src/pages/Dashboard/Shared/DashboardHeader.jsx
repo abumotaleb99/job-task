@@ -1,22 +1,34 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import profileImage from "../../../assets/Ellipse 28.png";
+import logo from "../../../assets/dashboard_logo.png";
 
 const DashboardHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleDropdownMenu = () => {
+    setIsOpenMenu(!isOpenMenu);
+  };
+
   return (
     <div className="">
-      <div className="bg-[#6078EA] flex justify-between px-28 py-5">
+      <div className="bg-[#6078EA] flex justify-between px-5 md:px-28 py-4 md:py-5">
+        <div className="flex items-center md:hidden">
+          <img src={logo} alt="" />
+          <h1 className="text-xl md:text-2xl text-[#fff] font-semibold pl-2">
+            Job Task
+          </h1>
+        </div>
         <div className="w-3/5">
           <input
             type="text"
             placeholder="Search here..."
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring "
+            className="w-full border border-gray-300 px-3 py-2 hidden md:block rounded-md focus:outline-none focus:ring "
           />
         </div>
         <div className="flex items-center gap-5">
@@ -45,12 +57,13 @@ const DashboardHeader = () => {
             <div className="h-11 w-11 rounded-full">
               <img src={profileImage} className="w-full" alt="" />
             </div>
-            <div>
+            <div className="hidden md:block">
               <h3 className="text-base text-[#FFFFFF] font-semibold">
                 Dr. Johirul
               </h3>
               <p className="text-xs text-[#FFFFFF] font-normal">Teacher</p>
             </div>
+
             <div className="relative inline-block">
               <svg
                 onClick={toggleDropdown}
@@ -68,13 +81,59 @@ const DashboardHeader = () => {
                 />
               </svg>
               {isOpen && (
-                <ul className="absolute bg-white px-5 rounded-md pt-1">
+                <ul className="absolute right-0 bg-white px-5 rounded-md pt-1">
                   <li>
                     <Link>Account</Link>
                   </li>
                   <li>
                     <Link>Logout</Link>
                   </li>
+                </ul>
+              )}
+            </div>
+
+            <div className="relative inline-block">
+              <svg
+                onClick={toggleDropdownMenu}
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 md:hidden text-[#fff]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              {isOpenMenu && (
+                <ul className="absolute right-0 bg-white px-5 rounded-md flex flex-col pt-1">
+                  <Link
+                    to=""
+                    className="text-sm  font-medium   rounded-md px-3 py-2 mb-1"
+                  >
+                    Dashboard
+                  </Link>
+                  <Link
+                    to=""
+                    className="text-sm  font-medium   rounded-md px-3 py-2 mb-1"
+                  >
+                    Courses
+                  </Link>
+                  <Link
+                    to=""
+                    className="text-sm  font-medium   rounded-md px-3 py-2 mb-1"
+                  >
+                    Account
+                  </Link>
+                  <Link
+                    to=""
+                    className="text-sm  font-medium   rounded-md px-3 py-2 mb-1"
+                  >
+                    Logout
+                  </Link>
                 </ul>
               )}
             </div>
